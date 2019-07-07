@@ -6,6 +6,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="../css/index.css">
 		<link rel="shortcut icon" href="../image/favicon.png">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 		<title>Productos</title>
 </head>
 <body>
@@ -35,6 +36,18 @@
 		<div class="contentAll">
 			<div class="product" >
 				<h8>TODOS LOS PRODUCTOS</h8>
+				
+				<div class="wrapper">
+					<div class="searchbox">
+						<input type="text" class="input">
+
+						<div class="searchbtn">
+							<i class="fas fa-search"></i>
+						</div>
+
+					</div>
+				</div>
+
 				<ul>
 					<li>
 						<img src="../image/prod_girl.png">
@@ -100,6 +113,6 @@
 		</div>
 	</div>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-	<script type="text/javascript" src="../java/index.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
 </body>
 </html>

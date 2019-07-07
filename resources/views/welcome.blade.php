@@ -23,9 +23,9 @@
 			 </header>
 		 </div>
 
-     <div class="slider">
-	     <img src="../image/slider.png">
-     </div>
+		 		<div class="slider">
+		 			@include('../layouts/slider')
+		 		</div>
 
 		 <div class="contentAll">
 			 <div class="content_center">

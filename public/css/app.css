@@ -6,25 +6,39 @@
         box-sizing: border-box;
         font-family: Oswald !important;
 }
-body{
-background: #68c7ce; /* Old browsers */
-background: -moz-linear-gradient(top, #68c7ce 0%, #9aa4c6 44%, #c77fbc 65%, #c77fbc 68%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, #68c7ce 0%,#9aa4c6 44%,#c77fbc 65%,#c77fbc 68%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, #68c7ce 0%,#9aa4c6 44%,#c77fbc 65%,#c77fbc 68%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#68c7ce', endColorstr='#c77fbc',GradientType=0 ); /* IE6-9 */
-background-size: auto;
+.logo,
+.logo_footer{
+	display: inline-block;
+	width: 30%;
+	height: auto;
+	vertical-align: middle;
 }
-.logo img{
-  display: inline-block;
-  width: 40%;
-  height: auto;
-  margin-top: 10%;
+.logo img,
+.logo_footer img{
+	display: inline-block;
+	width: 70%;
+	height: auto;
+	margin-top: 10%;
 }
 .nav-link{
   font-size: 20px;
 }
 #navbarSupportedContent{
   margin-right: 15%;
+}
+.card-header{
+  background: #6CC5CE !important;
+}
+button.btn.btn-primary{
+  color: rgba(255, 255, 255, 0.9);
+  background-color: violet !important;
+  border-radius: 50px;
+  padding: 3% 8%;
+  font-size: 15px;
+  border: none;
+  margin-left: -1px;
+  cursor: pointer;
+  letter-spacing: 1px;
 }
 
 /*!
