@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
+use App\Category;
 
 class ProductController extends Controller
 {
@@ -55,7 +56,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+        return view('agregarProductos', compact('categories'));
     }
 
     /**
@@ -66,7 +68,7 @@ class ProductController extends Controller
      */
 
 
-    
+
     public function show(Product $product)
     {
         //

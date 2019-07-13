@@ -30,7 +30,6 @@ Route::get('/productos', function () {
 
 //_____________________________________//
 
-Route::get('/agregarProductos', function(){
-  return view('agregarProductos');
-});
-Route::post('/agregarProductos', 'ProductoController@store');
+Route::get('/agregarProductos', 'ProductController@create');
+
+Route::post('/agregarProductos', 'ProductController@store');

@@ -1,3 +1,5 @@
+
+
 <div class="logo">
   <h1> <a href="/"><img src="../image/logo.png" ></a></h1>
 </div>
@@ -8,14 +10,27 @@
     <li><a href="/productos">PRODUCTOS</a></li>
     <li><a href="/faqs">FAQs</a></li>
 
-        @if (Route::has('register'))
-          <li><a href="{{ route('register') }}">REGISTRATE</a></li>
-        @endif
-
         @if (Route::has('login'))
                 @auth
-                  <li><a href="{{ url('/home') }}">Home</a></li>
+                <link rel="stylesheet" href="/css/hr.css">
+               <li><div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="{{ route('logout') }}"
+                         onclick="event.preventDefault();
+                                       document.getElementById('logout-form').submit();">
+                          {{ __('Cerrar Sesión') }}
+                      </a>
+
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          @csrf
+                      </form>
+                  </div></li>
+
+                  <li id="last_one"><a href="{{ url('/home') }}">Hola, {{Auth::user()->name}}!</a></li>
+
                 @else
+                  @if (Route::has('register'))
+                    <li><a href="{{ route('register') }}">REGISTRATE</a></li>
+                  @endif
                   <li id="last_one"><a href="{{ route('login') }}">LOGIN</a></li>
                 @endauth
         @endif

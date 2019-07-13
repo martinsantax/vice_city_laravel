@@ -67,7 +67,7 @@ header {
 	margin-bottom: 10%;
 }
 .menu ul{
-	margin-left: 23%;
+	margin-left: 24%;
 }
 .menu li{
 	display: inline-block;
@@ -109,75 +109,6 @@ hr.line{
 	margin-left: -2.5%;
 }
 
-/* SLIDER */
-.slidershow{
-  width: 100%;
-  height: 400px;
-  overflow: hidden;
-  -webkit-box-shadow: 0px 0px 70px -17px rgba(54,51,54,0.79);
-  -moz-box-shadow: 0px 0px 70px -17px rgba(54,51,54,0.79);
-  box-shadow: 0px 0px 70px -17px rgba(54,51,54,0.79);
-}
-.middle{
-  position: absolute;
-  top: 68%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
-.navigation{
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-}
-.bar{
-  width: 50px;
-  height: 10px;
-  border: 2px solid #fff;
-  margin: 6px;
-  cursor: pointer;
-  transition: 0.4s;
-}
-.bar:hover{
-  background: #fff;
-}
-
-input[name="r"]{
-    position: absolute;
-    visibility: hidden;
-}
-
-.slides{
-  width: 500%;
-  height: 100%;
-  display: flex;
-}
-
-.slide{
-  width: 20%;
-  transition: 0.6s;
-}
-.slide img{
-  width: 100%;
-  height: 100%;
-}
-
-#r1:checked ~ .s1{
-  margin-left: 0;
-}
-#r2:checked ~ .s1{
-  margin-left: -20%;
-}
-#r3:checked ~ .s1{
-  margin-left: -40%;
-}
-#r4:checked ~ .s1{
-  margin-left: -60%;
-}
-#r5:checked ~ .s1{
-  margin-left: -80%;
-}
 /*___________*/
 
 .content_center{
@@ -442,7 +373,7 @@ label{
 }
 .wrapper{
   position: absolute;
-  top: 109%;
+  top: 120%;
   left: 72%;
   transform: translate(-50%,-50%);
   z-index: 10;
@@ -846,6 +777,7 @@ p.form_perfil{
     margin-top: -1%;
     text-align: left;
 }
+
 /* #Media Querie LAPTOP - 980
 ================================================== */
 
@@ -910,7 +842,7 @@ p.form_perfil{
     margin-left: 0%;
   }
   .menu ul {
-    margin-left: -9%;
+    margin-left: -7%;
   }
   hr.line {
     margin-top: -14%;
@@ -920,12 +852,18 @@ p.form_perfil{
     opacity: 0.7;
   }
   .wrapper{
-    top: 116%;
+    top: 123%;
     left: 81%;
   }
-  .content_center{
-    margin-top: 8%;
+  .searchbtn {
+    width: 70px;
+    height: 70px;
+    top: -23%;
   }
+.searchbox .input {
+    height: 34px;
+}
+
 }
 
 
@@ -954,9 +892,6 @@ p.form_perfil{
     margin-bottom: -3%;
     font-size: 35px;
     color: #fff;
-  }
-  .slidershow middle{
-    height: auto;
   }
   .logo img{
     margin-top: 10%;
@@ -1073,9 +1008,6 @@ p.form_perfil{
 	    margin-right: 0;
 	    margin-bottom: 10px;
 	 }
-   .slidershow middle img{
-  	 display: none;
-   }
    hr.line{
   	 display: none;
    }
@@ -1098,12 +1030,14 @@ p.form_perfil{
     font-size: 35px;
   }
   .wrapper{
-    top: 30%;
+    top: 117%;
     left: 50%;
   }
   .searchbtn{
-    height: 48px;
-    width: 48px;
+    height: 65px;
+    width: 65px;
+    top: -15%;
+    right: -1%;
   }
   .searchbox .input{
     height: 30px;
@@ -1113,10 +1047,10 @@ p.form_perfil{
   .searchbox .input.active-width{
     width: 200px;
   }
-  .slider{
-    display: none;
-  }
   .content_center{
-    margin-top: 35%;
+    margin-top: 34%;
   }
+  ul {
+    margin-top: 10%;
+ }
 }

@@ -11,7 +11,7 @@
 
       <div class="">
         <h1>Agregar Productos</h1>
-        <a class="close" href="#">X</a>
+        <a class="close" href="/">X</a>
       </div>
 
       <form class="" action="/agregarProductos" method="post" enctype="multipart/form-data">
@@ -20,6 +20,14 @@
         <div class="">
           <input class="input" type="text" name="name" value="{{old("name")}}" placeholder="Nombre de Producto">
                  <small>{{$errors->first('name')}}</small>
+        </div>
+
+        <div class="">
+          <select class="input" name="select">
+            @foreach ($categories as $category)
+              <option value="{{$category->id}}">{{$category->name}}</option>
+            @endforeach
+          </select>
         </div>
 
       <div class="">
@@ -42,10 +50,9 @@
                     <small>{{$errors->first('description')}}</small>
       </div>
 
-      <div class="">
+      <div class="input">
            <input class="input" type="file" name="cover" value="" placeholder="Imagen">
       </div>
-
 
         <button class="registroSubmit" type="submit" name="button">Enviar</button>
 

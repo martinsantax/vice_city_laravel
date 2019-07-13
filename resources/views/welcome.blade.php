@@ -12,6 +12,7 @@
 	<div class="container">
 
 		<div class="contentAll">
+
 			<header>
 
         @include('../layouts/nabvar')
@@ -24,7 +25,7 @@
 		 </div>
 
 		 		<div class="slider">
-		 			@include('../layouts/slider')
+		 		@include('../layouts/carousel')
 		 		</div>
 
 		 <div class="contentAll">
