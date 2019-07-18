@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Colour extends Model
 {
-  public $table = 'products';
+  public $table = 'colours';
   public $primaryKey = 'id';
 //public $timestamps = false;
   public $guarded = [];

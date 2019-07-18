@@ -11,23 +11,25 @@
 |
 */
 
+Auth::routes();
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+//_____________________________________//
+
+Route::get('/productos', 'ProductController@index');
+Route::get('/product/{id}', 'ProductController@show');
+Route::get('/category/{id?}', 'ProductController@index');
+
+
 //_____________________________________//
 
 Route::get('/faqs', function () {
     return view('faqs');
 });
-
-Route::get('/productos', function () {
-    return view('productos');
-});
-
 //_____________________________________//
 
 Route::get('/agregarProductos', 'ProductController@create');

@@ -13,25 +13,29 @@
         @if (Route::has('login'))
                 @auth
                 <link rel="stylesheet" href="/css/hr.css">
-               <li><div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="{{ route('logout') }}"
-                         onclick="event.preventDefault();
-                                       document.getElementById('logout-form').submit();">
-                          {{ __('Cerrar Sesión') }}
-                      </a>
+               <li>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                       <a class="dropdown-item" href="{{ route('logout') }}"
+                          onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                           {{ __('Cerrar Sesión') }}
+                       </a>
 
-                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                          @csrf
-                      </form>
-                  </div></li>
+                       <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                           @csrf
+                       </form>
+                   </div>
+                </li>
 
                   <li id="last_one"><a href="{{ url('/home') }}">Hola, {{Auth::user()->name}}!</a></li>
+                  <a id="cart" href="/cart"><img src="../image/cart.png" ></a>
 
                 @else
                   @if (Route::has('register'))
                     <li><a href="{{ route('register') }}">REGISTRATE</a></li>
                   @endif
-                  <li id="last_one"><a href="{{ route('login') }}">LOGIN</a></li>
+                    <li id="last_one"><a href="{{ route('login') }}">LOGIN</a></li>
+                    <a id="cart" href="/login"><img src="../image/cart.png" ></a>
                 @endauth
         @endif
 

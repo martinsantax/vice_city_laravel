@@ -19,9 +19,16 @@ class CreateProductsTable extends Migration
 
          $table->unsignedBigInteger('category_id');
          $table->foreign('category_id')->references('id')->on('categories');
-         
+
+         $table->unsignedBigInteger('size_id');
+         $table->foreign('size_id')->references('id')->on('sizes');
+
+         $table->unsignedBigInteger('colour_id');
+         $table->foreign('colour_id')->references('id')->on('colours');
+
          $table->string('description', 255);
          $table->decimal('price',6,2);
+         $table->float('stock',6);
          $table->string('image', 150);
          $table->timestamps();// TODO: borrar productos.
      });

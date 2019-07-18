@@ -14,29 +14,20 @@
 
 		<div class="contentAll">
 			<header>
-        @include('../layouts/nabvar')
+        @include('/layouts/nabvar')
         <hr size="1" class="line" />
 
             <!-- MENU MOBILE -->
-        @include('../layouts/navbarMobile')
+        @include('/layouts/navbarMobile')
 			 </header>
 		 </div>
 
-		<div class="contentAll">
-			<div class="content_center">
-				<ul>
-					<li><a href="#" class="first"><p>JEANS</p></a></li>
-					<li><a href="#" class="second"><p>CAMISETAS</p></a></li>
-					<li><a href="#" class="third"><p>CAMPERAS</p></a></li>
-					<li><a href="#" class="forty"><p>ACESSORIOS</p></a></li>
-				</ul>
-			</div>
-		</div>
+		 		@include('/layouts/categories')
 
 		<div class="contentAll">
 			<div class="product" >
 				<h8>TODOS LOS PRODUCTOS</h8>
-				
+
 				<div class="wrapper">
 					<div class="searchbox">
 						<input type="text" class="input">
@@ -49,66 +40,30 @@
 				</div>
 
 				<ul>
-					<li>
-						<img src="../image/prod_girl.png">
-						<a href="#">PRODUCTO NOMBRE</a>
-						<a href="#" class="price">$90,00</a>
-						<span class="neon"></span>
-					</li>
-					<li><img src="../image/prod_man.png">
-						<a href="#">PRODUCTO NOMBRE</a>
-						<a href="#" class="price">$90,00</a>
-						<span class="neon2"></span>
-					</li>
-					<li>
-						<img src="../image/prod_girl.png">
-						<a href="#">PRODUCTO NOMBRE</a>
-						<a href="#" class="price">$90,00</a>
-						<span class="neon"></span>
-					</li>
-					<li>
-						<img src="../image/prod_man.png">
-						<a href="#">PRODUCTO NOMBRE</a>
-						<a href="#" class="price">$90,00</a>
-						<span class="neon2"></span>
-					</li>
-					<li>
-						<img src="../image/prod_girl.png">
-						<a href="#">PRODUCTO NOMBRE</a>
-						<a href="#" class="price">$90,00</a>
-						<span class="neon"></span>
-					</li>
-					<li>
-						<img src="../image/prod_man.png">
-						<a href="#">PRODUCTO NOMBRE</a>
-						<a href="#" class="price">$90,00</a>
-						<span class="neon2"></span>
-					</li>
-					<li>
-						<img src="../image/prod_girl.png">
-						<a href="#">PRODUCTO NOMBRE</a>
-						<a href="#" class="price">$90,00</a>
-						<span class="neon"></span>
-					</li>
-					<li>
-						<img src="../image/prod_man.png">
-						<a href="#">PRODUCTO NOMBRE</a>
-						<a href="#" class="price">$90,00</a>
-						<span class="neon2"></span>
-					</li>
-					<li>
-						<img src="../image/prod_girl.png">
-						<a href="#">PRODUCTO NOMBRE</a>
-						<a href="#" class="price">$90,00</a>
-						<span class="neon"></span>
-					</li>
+						@foreach ($products as $product)
+							<li>
+							<a href="/product/{{$product->id}}"><img src="/storage/products/{{$product->image}}"></a>
+							<a href="/product/{{$product->id}}">{{$product->name}}</a>
+							<a class="price">${{$product->price}}</a>
+							<a href="/category/{{$product->category_id}}"></a>
+							<span class="neon"></span>
+							<li>
+							<a href="/product/{{$product->id}}"><img src="/storage/products/{{$product->image}}"></a>
+							<a href="/product/{{$product->id}}">{{$product->name}}</a>
+							<a class="price">${{$product->price}}</a>
+							<a href="/category/{{$product->category_id}}"></a>
+							<span class="neon2"></span>
+						</li>
+						@endforeach
 				</ul>
+				<br>
+				{{$products->links()}}
 			</div>
 		</div>
 
 		<div class="contentAll">
 
-      @include('../layouts/footer')
+      @include('/layouts/footer')
 
 		</div>
 	</div>

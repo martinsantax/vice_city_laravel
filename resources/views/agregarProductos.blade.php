@@ -23,7 +23,8 @@
         </div>
 
         <div class="">
-          <select class="input" name="select">
+          <select class="input" name="category">
+              <option disabled selected>Categoria</option>
             @foreach ($categories as $category)
               <option value="{{$category->id}}">{{$category->name}}</option>
             @endforeach
@@ -36,14 +37,23 @@
       </div>
 
       <div class="">
-          <input class="input" type="text" name="colour" value="{{old("colour")}}" placeholder="Color">
-                  <small>{{$errors->first('colour')}}</small>
-      </div>
+          <select class="input" name="select">
+              <option disabled selected>Color</option>
+            @foreach ($colours as $colour)
+              <option name="colour" value="{{$colour->id}}">{{$colour->name}}</option>
+            @endforeach
+          </select>
+        </div>
 
-      <div class="">
-            <input class="input" type="text" name="size" value="{{old("size")}}" placeholder="Talle">
-                  <small>{{$errors->first('size')}}</small>
-      </div>
+        <div class="">
+           <select class="input" name="select">
+               <option disabled selected>Talle</option>
+             @foreach ($sizes as $size)
+               <option name="size" value="{{$size->id}}">{{$size->name}}</option>
+             @endforeach
+           </select>
+                     <small>{{$errors->first('size')}}</small>
+         </div>
 
       <div class="">
             <input class="input" type="text" name="description" value="{{old("description")}}" placeholder="Descripción">
@@ -55,7 +65,7 @@
       </div>
 
         <button class="registroSubmit" type="submit" name="button">Enviar</button>
-
+        
       </form>
       </div>
   </body>

@@ -67,7 +67,7 @@ header {
 	margin-bottom: 10%;
 }
 .menu ul{
-	margin-left: 24%;
+	margin-left: 16%;
 }
 .menu li{
 	display: inline-block;
@@ -93,6 +93,11 @@ header {
 #last_one a{
   color: #D66CAA!important;
   font-size: 15px;
+}
+#cart{
+  width: 3%;
+  position: absolute;
+  margin-left: 2%
 }
 .unic{
   margin-right: 65%;
@@ -428,6 +433,37 @@ label{
 .searchbox .input.active-width{
   width: 275px;
 }
+/* PRODUCT */
+#liProduct{
+  display: inline-block;
+  width: 60%;
+  position: relative;
+}
+#imgProduct {
+  margin-bottom: 5%;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+#pProduct{
+  background: none;
+  font-size: 27px;
+}
+#descProduct{
+  font-size: 25px;
+  background: none;
+  border: 1px solid #fff;
+  margin: 2%;
+  padding: 2%;
+}
+#X{
+  margin-left: -43%;
+  margin-top: 0.5%;
+  font-size: 25px;
+  font-weight: bold;
+  position: absolute;
+}
+
 
 /* FAQs */
 
@@ -890,11 +926,35 @@ p.form_perfil{
     margin-left: 1%;
     margin-top: 9%;
     margin-bottom: -3%;
-    font-size: 35px;
+    font-size: 28px;
     color: #fff;
   }
   .logo img{
     margin-top: 10%;
+  }
+  #liProduct{
+    display: inline-block;
+    width: 80%;
+    position: relative;
+  }
+  #imgProduct {
+    margin-bottom: 5%;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  }
+  #pProduct{
+    background: none;
+    font-size: 25px;
+  }
+  #descProduct{
+    font-size: 15px;
+    background: none;
+    border: 1px solid #fff;
+    margin: 2%;
+  }
+  #h2Product{
+    font-size: 25px;
   }
 }
 

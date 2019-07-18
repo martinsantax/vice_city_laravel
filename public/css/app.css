@@ -1,17 +1,5 @@
 @import "reset.css";
 
-
-
-body{
-background: #68c7ce; /* Old browsers */
-background: -moz-linear-gradient(top, #68c7ce 0%, #9aa4c6 44%, #c77fbc 65%, #c77fbc 68%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, #68c7ce 0%,#9aa4c6 44%,#c77fbc 65%,#c77fbc 68%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, #68c7ce 0%,#9aa4c6 44%,#c77fbc 65%,#c77fbc 68%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#68c7ce', endColorstr='#c77fbc',GradientType=0 ); /* IE6-9 */
-}
-
-
-
 .logo,
 .logo_footer{
 	display: inline-block;
