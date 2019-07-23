@@ -12,9 +12,10 @@ class ProductController extends Controller
 {
     public function store(Request $request)
     {
+
       $roules = [
           'name' => "required",
-          'category' => "required",
+          'category_id' => "required",
           'price' => "required",
           'cover' => "required"
      ];
@@ -22,23 +23,23 @@ class ProductController extends Controller
           'required' => "Este campo es obligatorio"
      ];
 
-   $this->validate($request,$roules,$messages);
-
+   // $this->validate($request,$roules,$messages);
+      $this->validate($request, $roules, $messages);
 
        $newProduct = new Product();
 
-       $path = $request->file('cover')->store('\public\cover');
+       
+       $path = $request->file('cover')->store('public/products');
        $file = basename($path);
 
 
        $newProduct->name = $request['name'];
-       $newProduct->category = $request['category'];
+       $newProduct->category_id = $request['category_id'];
        $newProduct->price = $request['price'];
-       $newProduct->colour = $request['colour'];
-       $newProduct->size = $request['size'];
+       $newProduct->colour_id= $request['colour_id'];
+       $newProduct->size_id = $request['size_id'];
        $newProduct->description = $request['description'];
-       $newProduct->cover = $file;
-
+       $newProduct->image = $file;
 
        $newProduct->save();
   }
@@ -52,13 +53,13 @@ class ProductController extends Controller
      */
     public function index($category = null)
     {
-      $products = Product::paginate(5);
-      return view('productos', compact('products'));
-
       if ($category) {
-        $products = Product::all()->where('category_id', $category);
+        $products = Product::where('category_id', $category)->paginate(5);
         return view('productos', compact('products'));
       }
+
+      $products = Product::paginate(5);
+      return view('productos', compact('products'));
 
     }
 

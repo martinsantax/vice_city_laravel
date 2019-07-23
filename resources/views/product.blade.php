@@ -36,7 +36,7 @@
                       <a class="price"><p id="pProduct">${{$product->price}}</p></a>
                       <input type="number" class="quantity" name="quantity" value="" placeholder="Cantidad">
                       <p class="errorQ">{{$errors->first('quantity')}}</p>
-                      <button type="submit" class="buybtn"> Argregar al Carrito</button>
+                      <button type="submit" name="id" value="{{$product->id}}" class="buybtn"> Argregar al Carrito</button>
                     </div>
 
                     <div class="">

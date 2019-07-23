@@ -65,7 +65,7 @@ class CartController extends Controller
       if($exist){
         $exist->quantity += $request->quantity;
         $exist->save();
-        return redirect('/products');
+        return redirect('/productos');
       }
 
       $cart = new Cart;
@@ -76,7 +76,7 @@ class CartController extends Controller
       $cart->user_id = Auth::user()->id;
 
       $cart->save();
-      return redirect('/products');
+      return redirect('/productos');
     }
 
     /**

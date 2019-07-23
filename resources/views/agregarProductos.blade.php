@@ -23,7 +23,7 @@
         </div>
 
         <div class="">
-          <select class="input" name="category">
+          <select class="input" name="category_id">
               <option disabled selected>Categoria</option>
             @foreach ($categories as $category)
               <option value="{{$category->id}}">{{$category->name}}</option>
@@ -37,19 +37,19 @@
       </div>
 
       <div class="">
-          <select class="input" name="select">
+          <select class="input" name="colour_id">
               <option disabled selected>Color</option>
             @foreach ($colours as $colour)
-              <option name="colour" value="{{$colour->id}}">{{$colour->name}}</option>
+              <option name="colour_id" value="{{$colour->id}}">{{$colour->name}}</option>
             @endforeach
           </select>
         </div>
 
         <div class="">
-           <select class="input" name="select">
+           <select class="input" name="size_id">
                <option disabled selected>Talle</option>
              @foreach ($sizes as $size)
-               <option name="size" value="{{$size->id}}">{{$size->name}}</option>
+               <option name="size_id" value="{{$size->id}}">{{$size->name}}</option>
              @endforeach
            </select>
                      <small>{{$errors->first('size')}}</small>
