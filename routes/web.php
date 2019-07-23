@@ -32,6 +32,13 @@ Route::get('/faqs', function () {
 });
 //_____________________________________//
 
+Route::get('/cart', 'CartController@index')->middleware('auth');
+Route::post('/addtocart', 'CartController@store')->middleware('auth');
+Route::get('/history', function () {
+    return view('history');
+});
+//_____________________________________//
+
 Route::get('/agregarProductos', 'ProductController@create');
 
 Route::post('/agregarProductos', 'ProductController@store');

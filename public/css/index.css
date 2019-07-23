@@ -249,7 +249,6 @@ footer{
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
 }
-
 .address li{
 	display: inline-block;
   height: auto;
@@ -419,27 +418,25 @@ label{
   transition: all 0.5s 0.6s linear;
 }
 
+
 /* jquery class */
+
+
 .searchbtn.bg-green{
   background: #c77fbc;
   transition: all 0.2s linear;
 }
-
 .searchbtn .fas.color-white{
   color: #fff;
   transition: all 0.2s linear;
 }
-
 .searchbox .input.active-width{
   width: 275px;
 }
+
 /* PRODUCT */
-#liProduct{
-  display: inline-block;
-  width: 60%;
-  position: relative;
-}
 #imgProduct {
+  width: 45%;
   margin-bottom: 5%;
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
@@ -448,6 +445,7 @@ label{
 #pProduct{
   background: none;
   font-size: 27px;
+  margin-bottom: 2%;
 }
 #descProduct{
   font-size: 25px;
@@ -457,11 +455,28 @@ label{
   padding: 2%;
 }
 #X{
-  margin-left: -43%;
+  margin-left: 8%;
   margin-top: 0.5%;
   font-size: 25px;
   font-weight: bold;
   position: absolute;
+  width: 3%;
+}
+.quantity{
+  width: 7%;
+  text-align: center;
+  display: block;
+  margin: auto;
+  margin-bottom: 1%;
+}
+.buybtn{
+  color: rgba(255, 255, 255, 0.9);
+  background-color: violet !important;
+  border-radius: 50px;
+  padding: 1% 2%;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1px;
 }
 
 
@@ -813,7 +828,13 @@ p.form_perfil{
     margin-top: -1%;
     text-align: left;
 }
-
+.errorQ{
+  font-family: Oswald;
+  position: absolute;
+  margin-left: 40%;
+  margin-top: -2.5%;
+  padding: 1px;
+}
 /* #Media Querie LAPTOP - 980
 ================================================== */
 
