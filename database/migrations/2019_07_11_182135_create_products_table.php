@@ -23,12 +23,12 @@ class CreateProductsTable extends Migration
          $table->unsignedBigInteger('size_id');
          $table->foreign('size_id')->references('id')->on('sizes');
 
-         $table->unsignedBigInteger('colour_id');
+         $table->unsignedBigInteger('colour_id')->nulleable();
          $table->foreign('colour_id')->references('id')->on('colours');
 
-         $table->string('description', 255);
+         $table->string('description', 255)->nulleable();
          $table->decimal('price',6,2);
-        // $table->float('stock',6);
+         $table->float('stock',6);
          $table->string('image', 150);
          $table->timestamps();// TODO: borrar productos.
      });

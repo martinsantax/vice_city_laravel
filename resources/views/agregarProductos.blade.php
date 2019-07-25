@@ -16,10 +16,11 @@
 
       <form class="" action="/agregarProductos" method="post" enctype="multipart/form-data">
         @csrf
-
         <div class="">
           <input class="input" type="text" name="name" value="{{old("name")}}" placeholder="Nombre de Producto">
-                 <small>{{$errors->first('name')}}</small>
+             <div class="error">
+                {{$errors->first('name')}}
+             </div>
         </div>
 
         <div class="">
@@ -29,11 +30,23 @@
               <option value="{{$category->id}}">{{$category->name}}</option>
             @endforeach
           </select>
+                  <div class="error">
+                     {{$errors->first('category_id')}}
+                  </div>
         </div>
 
       <div class="">
           <input class="input" type="number" name="price" value="{{old("price")}}" placeholder="Precio">
-                  <small>{{$errors->first('price')}}</small>
+             <div class="error">
+                {{$errors->first('price')}}
+             </div>
+      </div>
+
+      <div class="">
+          <input class="input" type="number" name="stock" value="{{old("stock")}}" placeholder="Cantidad">
+             <div class="error">
+                {{$errors->first('stock')}}
+             </div>
       </div>
 
       <div class="">
@@ -43,6 +56,9 @@
               <option name="colour_id" value="{{$colour->id}}">{{$colour->name}}</option>
             @endforeach
           </select>
+            <div class="error">
+              {{$errors->first("colour_id")}}
+            </div>
         </div>
 
         <div class="">
@@ -52,20 +68,28 @@
                <option name="size_id" value="{{$size->id}}">{{$size->name}}</option>
              @endforeach
            </select>
-                     <small>{{$errors->first('size')}}</small>
+             <div class="error">
+                {{$errors->first('size_id')}}
+             </div>
          </div>
 
       <div class="">
             <input class="input" type="text" name="description" value="{{old("description")}}" placeholder="Descripción">
-                    <small>{{$errors->first('description')}}</small>
+              <div class="error">
+                {{$errors->first('description')}}
+              </div>
       </div>
 
-      <div class="input">
+      <div class="">
+        <div class="input">
            <input class="input" type="file" name="cover" value="" placeholder="Imagen">
+        </div>
+        <div class="error">
+          {{$errors->first('cover')}}
+        </div>
       </div>
-
         <button class="registroSubmit" type="submit" name="button">Enviar</button>
-        
+
       </form>
       </div>
   </body>

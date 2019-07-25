@@ -204,7 +204,8 @@ a p{
 }
 .product img{
 	display: inline-block;
-	width: 60%;
+	width: 190px;
+  height: 190px;
 	margin-top: 10%;
 }
 .product .neon{
@@ -522,7 +523,6 @@ label{
 .content{
 	display: none;
 }
-
 
 /* REGSTRO & LOGIN*/
 
