@@ -6,12 +6,12 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
     <title></title>
   </head>
-  <body>
+  <body class="adm">
     <div class="contenedor">
 
       <div class="">
         <h1>Agregar Productos</h1>
-        <a class="close" href="/">X</a>
+        <a class="close" href="/adm">X</a>
       </div>
 
       <form class="" action="/agregarProductos" method="post" enctype="multipart/form-data">

@@ -78,7 +78,7 @@ class ProductController extends Controller
         $categories = Category::all();
         $colours = Colour::all();
         $sizes = Size::all();
-        return view('agregarProductos', compact('categories','colours','sizes'));
+        return view('addProduct', compact('categories','colours','sizes'));
     }
 
     /**

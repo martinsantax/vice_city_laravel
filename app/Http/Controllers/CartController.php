@@ -119,13 +119,13 @@ class CartController extends Controller
      * @param  \App\Cart  $cart
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Cart $cart)
+    public function destroy($id)
     {
-      $item = Cart::where('id',$id)
+      $item = Cart::where('id', $id)
       ->where('user_id',Auth::user()->id)
-      ->where('status',0)->get();
+      ->where('status',0)->first();
 
-      $item[0]->delete();
+      $item->delete();
       return redirect('/cart');
     }
     public function cartClose(){

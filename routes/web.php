@@ -13,31 +13,37 @@
 
 Auth::routes();
 
+//__________________HOME_______________________//
+Route::get('/home', 'HomeController@index')->name('home');
+
+//__________________PROFILE_____________________//
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', 'HomeController@index')->name('home');
-//_____________________________________//
+//________________PRODUCTS_____________________//
 Route::get('/productos/{category_id}', 'ProductController@index');
 Route::get('/productos', 'ProductController@index');
 Route::get('/product/{id}', 'ProductController@show');
 
-
-//_____________________________________//
-
+//________________FAQs___________________//
 Route::get('/faqs', function () {
     return view('faqs');
 });
-//_____________________________________//
 
+//_________________CART__________________//
 Route::get('/cart', 'CartController@index')->middleware('auth');
 Route::post('/addtocart', 'CartController@store')->middleware('auth');
-Route::get('/history', function () {
-    return view('history');
+Route::post('/cartClose', 'CartController@cartClose')->middleware('auth');
+Route::get('/delete/{id}', 'CartController@destroy')->middleware('auth');
+Route::get('/history', 'CartController@history')->middleware('auth');
+
+//_________________ADM__________________//
+Route::get('/adm', function () {
+  return view('adm');
 });
-//_____________________________________//
+Route::get('addProduct', 'ProductController@create')->middleware('auth');
+Route::post('addProduct', 'ProductController@store')->middleware('auth');
 
-Route::get('/agregarProductos', 'ProductController@create');
 
-Route::post('/agregarProductos', 'ProductController@store');
+Route::get('/delete/{id}', 'ProductController@destroy')->middleware('auth');
