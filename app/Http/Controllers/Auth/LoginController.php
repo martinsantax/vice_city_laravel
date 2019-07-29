@@ -25,7 +25,25 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+     public function authenticated(){
+
+    /**
+     * Where to redirect users after login.
+     *
+     * @var string
+     */
+    $administrador=\Auth::user()->admin;
+    if ($administrador==true){
+        return redirect('/agregarProductos');
+    }
+    if ($administrador==false){
+        return redirect('/');
+    }
+
+    //protected $redirectTo = '/agregarProductos';
+}
+
+  //protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
