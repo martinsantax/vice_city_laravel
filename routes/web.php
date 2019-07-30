@@ -42,8 +42,5 @@ Route::get('/history', 'CartController@history')->middleware('auth');
 Route::get('/adm', function () {
   return view('adm');
 });
-Route::get('addProduct', 'ProductController@create')->middleware('auth');
-Route::post('addProduct', 'ProductController@store')->middleware('auth');
-
-
-Route::get('/delete/{id}', 'ProductController@destroy')->middleware('auth');
+Route::get('/addProduct', 'ProductController@create')->middleware(['auth','admin']);
+Route::post('addProduct', 'ProductController@store')->middleware(['auth','admin']);

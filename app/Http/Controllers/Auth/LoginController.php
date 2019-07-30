@@ -20,12 +20,7 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
-     public function authenticated(){
+    public function authenticated(){
 
     /**
      * Where to redirect users after login.
@@ -33,25 +28,27 @@ class LoginController extends Controller
      * @var string
      */
     $administrador=\Auth::user()->admin;
-    if ($administrador==true){
-        return redirect('/agregarProductos');
-    }
     if ($administrador==false){
         return redirect('/');
+    }
+    if ($administrador==true){ //aqui tá o meu 0
+        return redirect('/addProduct');
     }
 
     //protected $redirectTo = '/agregarProductos';
 }
 
-  //protected $redirectTo = '/home';
+    //protected $redirectTo2 = '/productos';
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
+
     public function __construct()
     {
+
         $this->middleware('guest')->except('logout');
     }
 }
