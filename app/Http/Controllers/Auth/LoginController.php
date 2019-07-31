@@ -32,7 +32,7 @@ class LoginController extends Controller
         return redirect('/');
     }
     if ($administrador==true){ //aqui tá o meu 0
-        return redirect('/addProduct');
+        return redirect('/adm');
     }
 
     //protected $redirectTo = '/agregarProductos';
@@ -50,5 +50,6 @@ class LoginController extends Controller
     {
 
         $this->middleware('guest')->except('logout');
+        return redirect('/');
     }
 }

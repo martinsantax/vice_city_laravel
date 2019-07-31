@@ -896,6 +896,31 @@ p.form_perfil{
 }
 
 
+/* CSS/BUTTON EN PRODUCTOS */
+
+.SubmitEdit{
+    color: #fff;
+    background-color: #7fd6db;
+    border-radius: 50px;
+    padding: 1% 10%;
+    font-weight: bold;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    font-family: Oswald;
+    font-size: 16px;
+    width: 66%;
+}
+
+.contenedorEdit{
+
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 63px 40px;
+}
+
+
 /* #Media Querie LAPTOP - 980
 ================================================== */
 
