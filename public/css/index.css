@@ -90,9 +90,9 @@ header {
 .nav__menu:nth-child(4):hover{
   background-color: #fff;
 }
-/* .nav__menu:hover > .nav__menu-lists li {
+.nav__menu:hover > .nav__menu-lists li {
   display: block;
-} */
+}
 #userName{
   text-decoration: none;
   color: #318EC8;
