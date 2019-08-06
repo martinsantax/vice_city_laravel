@@ -5,7 +5,7 @@
   <div class="nav">
       <li class="nav__menu"><a class="navA" href="{{ url('/') }}">HOME</a></li>
       <li class="nav__menu"><a class="navA" href="{{ url('products') }}">PRODUCTOS</a></li>
-      <li class="nav__menu"><a class="navA" href="{{ url('faqs') }}">FAQs</a></li>
+      <li class="nav__menu"><a class="navA" href="{{ url('FAQs') }}">FAQs</a></li>
 
       @if (Route::has('login'))
               @auth
