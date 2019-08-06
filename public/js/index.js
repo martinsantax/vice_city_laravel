@@ -45,4 +45,28 @@ function showSlides(n) {
   };
 
 
+  //----Input Provincias----//
+  fetch("https://dev.digitalhouse.com/api/getProvincias")
+  .then(function(response)
+  {
+    return response.json();
+  })
+
+  .then(function(respuesta){
+    var select = document.querySelector('select#provincia');
+
+    for(var i=0 ; i < respuesta.data.length ; i++){
+      var nombreProvincia = respuesta.data[i].state;
+      var option = document.createElement('option');
+      option.innerText = nombreProvincia;
+      option.setAttribute('value',respuesta.data[i].state);
+      select.append(option);
+      }
+    })
+    .catch(function(error){
+    console.log(error);
+    });
+
+
+
 }

@@ -18,6 +18,7 @@ class PerfilController extends Controller
           'dni' => "required",
           'direccion' => "required",
           'codigo_postal' => "required",
+          'provincia' => "required",
           'ciudad' => "required",
           'fecha_de_nacimiento'=> "required",
           'image' => "required"
@@ -39,6 +40,7 @@ class PerfilController extends Controller
        $newPerfil->dni = $request['dni'];
        $newPerfil->direccion = $request['direccion'];
        $newPerfil->codigo_postal = $request['codigo_postal'];
+       $newPerfil->provincia = $request['provincia'];
        $newPerfil->ciudad = $request['ciudad'];
        $newPerfil->fecha_de_nacimiento= $request['fecha_de_nacimiento'];
        $newPerfil->image = $file;
@@ -71,11 +73,12 @@ class PerfilController extends Controller
 
        }
 
-     //  $perfil->email = $request['email'];
+
        $perfil->telefono = $request['telefono'];
        $perfil->dni = $request['dni'];
        $perfil->direccion = $request['direccion'];
        $perfil->codigo_postal= $request['codigo_postal'];
+       $perfil->provincia = $request['provincia'];
        $perfil->ciudad = $request['ciudad'];
        $perfil->fecha_de_nacimiento = $request['fecha_de_nacimiento'];
        $perfil->image = $file;

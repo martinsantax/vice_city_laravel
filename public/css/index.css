@@ -668,7 +668,7 @@ label{
 }
 #X{
   margin-left: 8%;
-  margin-top: 0.5%;
+  margin-top: 4%;
   font-size: 25px;
   font-weight: bold;
   position: absolute;
@@ -1426,6 +1426,14 @@ p.form_perfil{
     display: block;
     padding-right: 6%;
     width: 281px;
+  }
+  .quantity{
+    width: 20%;
+  }
+  #X{
+      margin-left: 69%;
+      margin-top: 6.5%;
+      font-size: 18px;
   }
 }
 

@@ -64,6 +64,12 @@
 	               			{{$errors->first('codigo_postal')}}
 	             		</div>
 		        	</div>
+					  <div>
+	        			<p class="form_perfil">Provincia</p>
+         				<select id = 'provincia' type="text" name="provincia" class="input"  value="{{Auth::user()->provincia}}">
+         					<option disabled selected>Seleccionar</option>
+          			</select>
+        		</div>
 
 		        	<div>
 		           		<p class="form_perfil">Ciudad</p>
