@@ -1240,6 +1240,7 @@ p.form_perfil{
 }
 
 .close_agre{
+  margin-top: -8%;
   color: #fff;
   background-color: none;
   font-weight: bold;
@@ -1247,7 +1248,6 @@ p.form_perfil{
   float: right;
   cursor: pointer;
   text-decoration: none;
-  font-family: Oswald;
 }
 .contenedor_addP{
   width: 50%;

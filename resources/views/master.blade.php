@@ -27,6 +27,7 @@
       @yield('cart')
       @yield('history')
 			@yield('home')
+			@yield('editProduct')
 
      <div class="contentAll">
         @include('../layouts/footer')
