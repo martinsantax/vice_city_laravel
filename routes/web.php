@@ -29,8 +29,8 @@ Route::get('/searchProduct', 'ProductController@search');
 
 
 //_____FAQs______//
-Route::get('/faqs', function () {
-    return view('faqs');
+Route::get('/FAQs', function () {
+    return view('FAQs');
 });
 
 //______CART_______//
