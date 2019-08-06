@@ -29,6 +29,7 @@ class CreateProductsTable extends Migration
               $table->string('description', 255)->nullable();
               $table->decimal('price',6,2);
               $table->float('stock',6)->default(0);
+              $table->boolean('top')->default(0);
               $table->string('image', 150);
               $table->timestamps();// TODO: borrar productos.
           });

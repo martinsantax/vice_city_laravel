@@ -1,7 +1,7 @@
 <div class="menu_footer">
   <ul class="unic">
     <li><a href="/">HOME</a></li>
-    <li><a href="/productos">PRODUCTOS</a></li>
+    <li><a href="/products">PRODUCTOS</a></li>
     <li><a href="/faqs">FAQs</a></li>
 
 

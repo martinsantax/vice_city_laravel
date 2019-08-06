@@ -14,8 +14,8 @@
       </div>
       <div class="contentAll">
         <a href="addProduct" class="buybtn" id="admbtn">Agregar Productos</a>
-        <a href="agregarProductos" class="buybtn" id="admbtn">Modificar Productos</a>
-        <a href="deleteProduct" class="buybtn" id="admbtn">Eliminar Productos</a>
+        <a href="products" class="buybtn" id="admbtn">Editar/Borrar Productos</a>
+
       </div>
     </div>
   </body>

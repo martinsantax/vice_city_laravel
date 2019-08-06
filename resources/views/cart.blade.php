@@ -1,31 +1,17 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/index.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet">
+@extends('master')
+  @section('cart')
+
     <title>Carrito</title>
-  </head>
-  <body id="cartBody">
-    	<div class="container">
-
-        <div class="contentAll">
-          <header>
-
-            @include('/layouts/nabvar')
-    				<hr size="1" class="line" />
-
-    						<!-- MENU MOBILE -->
-            @include('/layouts/navbarMobile')
-
-    			 </header>
-    		 </div>
 
         <div class="mainCart">
           <ul>
+            @php
+              $carritoVacio = false;
+            @endphp
             @forelse ($carts as $item)
               <div class="mainLis">
                 <div class="lis">
+                  <li class="cartIl"> Nombre:  {{$item->name}}  | </li>
                   <li class="cartIl"> Nombre:  {{$item->name}}  | </li>
                   <li class="cartIl"> Cantidad: {{$item->quantity}}  | </li>
                   <li class="cartIl"> Precio: $ {{$item->price}}  | </li>
@@ -35,16 +21,21 @@
               </div>
             @empty
               <p class="pCart">Carrito vacío</p>
-              <a href="/productos" class="aCart">Ver todos los productos</a>
+              <a href="/products" class="aCart">Ver todos los productos</a>
+              @php
+                $carritoVacio = true;
+              @endphp
             @endforelse
           </ul>
-         <div class="">
-          <form class="" action="/cartClose" method="post">
-            @csrf
-            <button type="submit" name="button" class="cartBuy">Comprar</button>
-          </form>
-        </div>
+          @if (!$carritoVacio)
+            <div class="cartForm">
+             <form class="" action="/cartClose" method="post">
+               @csrf
+               <button type="submit" name="button" class="cartBuy">Comprar</button>
+             </form>
+           </div>
+           @endif
+
       </div>
-    </div>
-  </body>
-</html>
+
+  @endsection

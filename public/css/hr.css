@@ -10,17 +10,11 @@
 .sr-only{
   display: none;
 }
-.menu ul {
-    margin-left: 10%;
-}
 
 
 @media screen and (max-width: 920px) {
   .carousel-item img{
     height: auto;
-  }
-  .menu ul {
-      margin-left: -10%;
   }
   .menu a{
     font-size: 16px;

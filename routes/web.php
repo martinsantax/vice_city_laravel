@@ -13,34 +13,43 @@
 
 Auth::routes();
 
-//__________________HOME_______________________//
+//_______HOME________//
 Route::get('/home', 'HomeController@index')->name('home');
 
-//__________________PROFILE_____________________//
-Route::get('/', function () {
-    return view('welcome');
-});
+//_______PROFILE________//
+Route::get('/', 'ProductController@indexHome');
+Route::get('/home/{id}', 'PerfilController@login');
+Route::post('/home', 'PerfilController@update');
 
-//________________PRODUCTS_____________________//
-Route::get('/productos/{category_id}', 'ProductController@index');
-Route::get('/productos', 'ProductController@index');
+//_____PRODUCTS________//
+Route::get('/products/{id?}', 'ProductController@index');
 Route::get('/product/{id}', 'ProductController@show');
+Route::get('/searchProduct', 'ProductController@search');
 
-//________________FAQs___________________//
+
+
+//_____FAQs______//
 Route::get('/faqs', function () {
     return view('faqs');
 });
 
-//_________________CART__________________//
+//______CART_______//
 Route::get('/cart', 'CartController@index')->middleware('auth');
 Route::post('/addtocart', 'CartController@store')->middleware('auth');
 Route::post('/cartClose', 'CartController@cartClose')->middleware('auth');
 Route::get('/delete/{id}', 'CartController@destroy')->middleware('auth');
 Route::get('/history', 'CartController@history')->middleware('auth');
 
-//_________________ADM__________________//
+//______ADM_______//
 Route::get('/adm', function () {
-  return view('adm');
+ return view('adm');
 });
 Route::get('/addProduct', 'ProductController@create')->middleware(['auth','admin']);
-Route::post('addProduct', 'ProductController@store')->middleware(['auth','admin']);
+Route::post('/addProduct', 'ProductController@store')->middleware(['auth','admin']);
+
+//_____MODIFICAR PRODUCTOS______//
+Route::get('/editProduct/{id}', 'ProductController@edit')->middleware(['auth','admin']);
+Route::post('/editProduct', 'ProductController@update')->middleware(['auth','admin']);
+
+//_____BORRAR_____//
+Route::post('/editProduct/{id}', 'ProductController@destroy')->middleware(['auth','admin']);

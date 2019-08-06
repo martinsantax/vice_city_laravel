@@ -22,7 +22,8 @@ $factory->define(Product::class, function(Faker $faker) use($categories, $colour
     'size_id'=> $sizes->random()->id,
     'description' => $faker->sentence(20),
     'price' => $faker->randomFloat(2, 300, 4000),
-    // 'stock' => $faker->numberBetween(1, 15),
+    'stock' => $faker->numberBetween(1, 15),
+    'top' => $faker->boolean(),
     'image' => $faker->image($path ,400 ,400 ,'abstract' ,false),
   ];
 });

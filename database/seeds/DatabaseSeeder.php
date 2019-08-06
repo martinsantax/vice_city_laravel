@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
         $this->call(SizeSeeder::class);
         $this->call(CategorySeeder::class);
 
-        factory(\App\Product::class, 20)->create();
+        factory(\App\Product::class, 1)->create();
 
     }
 }
