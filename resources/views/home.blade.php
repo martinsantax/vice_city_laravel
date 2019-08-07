@@ -4,7 +4,7 @@
 	<title>VICE CITY PERFIL</title>
 
 	<div class="contentAll">
-				<h2 class="titlePerfil">PERFIL</h2>
+				<h2 class="titlePerfil" id="h2Perfil">PERFIL</h2>
 
 				<div class="containerForm">
 					<div class="detailsPerfil">

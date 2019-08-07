@@ -4,7 +4,7 @@
     <title>Carrito</title>
 
         <div class="mainCart">
-          <ul>
+          <ul class="ulCart">
             @php
               $carritoVacio = false;
             @endphp
@@ -29,7 +29,7 @@
           </ul>
           @if (!$carritoVacio)
             <div class="cartForm">
-             <form class="" action="/cartClose" method="post">
+             <form class="addForm" action="/cartClose" method="post">
                @csrf
                <button type="submit" name="button" class="cartBuy">Comprar</button>
              </form>

@@ -91,7 +91,8 @@
           {{$errors->first('cover')}}
         </div>
       </div>
-        <button class="button_pg_edit" type="submit" name="button">Enviar</button>
+
+        <button class="button_pg_edit" id="boton" type="submit" name="button">Enviar</button>
 
       </form>
 

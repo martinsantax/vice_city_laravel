@@ -19,4 +19,10 @@ $(document).ready(function(){
 
 
 
+//---Buttons---//
+	$(".cartBuy").click(function(){
+	  alert("Gracias por tu compra!");
+	});
+
+
 });
